@@ -17,6 +17,7 @@ async function main() {
 
   var server = http.createServer(
     async function (request, response) {
+      sys.log('access!');
       await sleep(t);
       response.writeHead(200, { 'Content-Type': 'text/plain' });
       response.write('Hello World!!');
